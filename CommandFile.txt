@@ -1,0 +1,20 @@
+_________________________________________________________________________
+
+Kommandozeilen (Notiz)
+
+java -cp .\saxon-he-10.3.jar net.sf.saxon.Transform -t -s:.\Rechnung.xml  -xsl:.\Rechnung.xsl -o:Rechnung.fo
+
+java -cp .\saxon-he-10.3.jar net.sf.saxon.Transform -t -s:.\invoice\invoice.xml  -xsl:.\invoice\invoice.xsl -o:.\invoice\invoice.fo
+
+
+java -jar .\fop.jar -xml .\invoice\invoice.xml -xsl .\invoice\invoice.xsl -pdf .\invoice\invoice.pdf
+.\fop\fop.bat .\Result.fo Result.pdf
+
+oder 
+
+java -jar fop.jar .\Result.fo Result.pdf
+java -jar fop.jar .\invoice\invoice.fo .\invoice\invoice.pdf
+
+
+_____________________________________________________________________________
+
